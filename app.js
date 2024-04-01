@@ -12,6 +12,9 @@ UserDataConstructor.prototype.getFullName = function () {
     return `${this.firstName} ${this.lastName}`;
 };
 
+
+// window.open(``,``,`width=200,height=200,top=200,left=550`)
+
 // Sign Up form submission
 window.addEventListener(`DOMContentLoaded`, () => {
     let createAccountForm = document.querySelector(`#create-account-form`);
@@ -78,14 +81,14 @@ window.addEventListener(`DOMContentLoaded`, () => {
                 }
             }
             if (flag === false) {
-                let warningText = document.querySelector(`#warn-text`)
-                warningText.style.display = `block`
+                let warningText = document.querySelector(`#warn-text`);
+                warningText.style.display = `block`;
                 event.target.children[4].disabled = true;
                 event.target.children[3].value = ``;
                 event.target.children[3].addEventListener(`focus`, () => {
                     event.target.children[4].disabled = false;
-                    let warningText = document.querySelector(`#warn-text`)
-                warningText.style.display = `none`
+                    let warningText = document.querySelector(`#warn-text`);
+                    warningText.style.display = `none`;
                 });
             }
             event.preventDefault();
@@ -93,7 +96,7 @@ window.addEventListener(`DOMContentLoaded`, () => {
     }
 });
 
-// Product purchase function 
+// Product purchase function
 // window.addEventListener(`DOMContentLoaded`, () => {
 //     let buyBtn = document.querySelector(`#buy-btn`)
 //     if (buyBtn) {
